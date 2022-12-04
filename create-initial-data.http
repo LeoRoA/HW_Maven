@@ -1,0 +1,113 @@
+### Создать сотрудника 1
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n1",
+  "lastName": "f1",
+  "department": 1,
+  "salary": 1200
+}
+
+### Создать сотрудника 2
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n2",
+  "lastName": "f2",
+  "department": 2,
+  "salary": 1300
+}
+
+### Создать сотрудника 3
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n3",
+  "lastName": "f3",
+  "department": 3,
+  "salary": 1400
+}
+
+### Создать сотрудника 4
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n4",
+  "lastName": "f4",
+  "department": 4,
+  "salary": 1500
+}
+
+
+
+### Создать сотрудника 5
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n5",
+  "lastName": "f5",
+  "department": 5,
+  "salary": 1600
+}
+
+### Создать сотрудника 6
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n6",
+  "lastName": "f6",
+  "department": 1,
+  "salary": 1100
+}
+
+### Создать сотрудника 7
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n7",
+  "lastName": "f7",
+  "department": 2,
+  "salary": 1700
+}
+
+### Создать сотрудника 8
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n8",
+  "lastName": "f8",
+  "department": 3,
+  "salary": 1800
+}
+
+### Создать сотрудника 9
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n9",
+  "lastName": "f9",
+  "department": 4,
+  "salary": 2000
+}
+
+
+
+### Создать сотрудника 10
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "firstName": "n10",
+  "lastName": "f10",
+  "department": 5,
+  "salary": 1900
+}
