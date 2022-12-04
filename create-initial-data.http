@@ -3,8 +3,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n1",
-  "lastName": "f1",
+  "firstName": "nameFirst",
+  "lastName": "fNFirst",
   "department": 1,
   "salary": 1200
 }
@@ -14,8 +14,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n2",
-  "lastName": "f2",
+  "firstName": "nameSecond",
+  "lastName": "fNSecond",
   "department": 2,
   "salary": 1300
 }
@@ -25,8 +25,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n3",
-  "lastName": "f3",
+  "firstName": "nameThird",
+  "lastName": "fNThird",
   "department": 3,
   "salary": 1400
 }
@@ -36,8 +36,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n4",
-  "lastName": "f4",
+  "firstName": "nameForth",
+  "lastName": "fNForth",
   "department": 4,
   "salary": 1500
 }
@@ -49,8 +49,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n5",
-  "lastName": "f5",
+  "firstName": "nameFifth",
+  "lastName": "fNFifth",
   "department": 5,
   "salary": 1600
 }
@@ -60,8 +60,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n6",
-  "lastName": "f6",
+  "firstName": "nameSixth",
+  "lastName": "fNSixth",
   "department": 1,
   "salary": 1100
 }
@@ -71,8 +71,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n7",
-  "lastName": "f7",
+  "firstName": "nameSeventh",
+  "lastName": "fNSeventh",
   "department": 2,
   "salary": 1700
 }
@@ -82,8 +82,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n8",
-  "lastName": "f8",
+  "firstName": "nameEighth",
+  "lastName": "fNEighth",
   "department": 3,
   "salary": 1800
 }
@@ -93,8 +93,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n9",
-  "lastName": "f9",
+  "firstName": "nameNinth",
+  "lastName": "fNNinth",
   "department": 4,
   "salary": 2000
 }
@@ -106,8 +106,8 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstName": "n10",
-  "lastName": "f10",
+  "firstName": "nameTenth",
+  "lastName": "fNTenth",
   "department": 5,
   "salary": 1900
 }
