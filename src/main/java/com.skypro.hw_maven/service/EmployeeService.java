@@ -1,10 +1,14 @@
 package com.skypro.hw_maven.service;
 
+import com.skypro.hw_maven.exceptions.InvalidEmployeeRequestExceptions;
 import com.skypro.hw_maven.model.Employee;
 import com.skypro.hw_maven.record.EmployeeRequest;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.util.comparator.Comparators;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,11 +21,13 @@ public class EmployeeService {
     }
 
     public Employee addEmployee(EmployeeRequest employeeRequest) {
-        if (employeeRequest.getFirstName() == null || employeeRequest.getLastName() == null) {
-            throw new IllegalArgumentException("Должны быть заполнены имя и фамилия");
+        if (!StringUtils.isAlpha(employeeRequest.getFirstName()) ||
+                !StringUtils.isAlpha(employeeRequest.getLastName())) {
+            throw new InvalidEmployeeRequestExceptions();
         }
-        Employee employee = new Employee(employeeRequest.getFirstName(),
-                employeeRequest.getLastName(),
+        Employee employee = new Employee(
+                StringUtils.capitalize(employeeRequest.getFirstName()),
+                StringUtils.capitalize(employeeRequest.getLastName()),
                 employeeRequest.getDepartment(),
                 employeeRequest.getSalary());
 
@@ -36,33 +42,18 @@ public class EmployeeService {
     }
 
     public Employee getIdMinSalary() {
-        int min = employees.values().stream()
-                .mapToInt(Employee::getSalary)
-                .min()
-                .getAsInt();
-        int id = -1;
-        for (Employee e : employees.values()) {
-            if (e.getSalary() == min) {
-                id = e.getId();
-            }
-        }
-        return employees.get(id);
+        return employees.values().stream()
+                .min((Comparator.comparingInt(Employee::getSalary)))
+                .orElseThrow(InvalidEmployeeRequestExceptions::new);
     }
 
 
     public Employee getIdMaxSalary() {
-        int max = employees.values().stream()
-                .mapToInt(Employee::getSalary)
-                .max()
-                .getAsInt();
-        int id = -1;
-        for (Employee e : employees.values()) {
-            if (e.getSalary() == max) {
-                id = e.getId();
-            }
-        }
-        return employees.get(id);
+        return employees.values().stream()
+                .max(Comparator.comparingInt(Employee::getSalary))
+                .orElseThrow(InvalidEmployeeRequestExceptions::new);
     }
+
     public Map<Integer, Employee> getHighlyPaidEmployee() {
         double avg = employees.values().stream()
                 .mapToInt(Employee::getSalary)
@@ -71,8 +62,7 @@ public class EmployeeService {
         Map<Integer, Employee> employeeHighlyPaid = new HashMap<>();
         for (Employee e : employees.values()) {
             if (e.getSalary() > avg) {
-                employeeHighlyPaid.put(e.getId(),e);
-
+                employeeHighlyPaid.put(e.getId(), e);
             }
         }
         return employeeHighlyPaid;
