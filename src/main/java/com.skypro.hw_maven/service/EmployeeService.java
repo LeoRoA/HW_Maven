@@ -5,7 +5,7 @@ import com.skypro.hw_maven.model.Employee;
 import com.skypro.hw_maven.record.EmployeeRequest;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
-import org.springframework.util.comparator.Comparators;
+
 
 import java.util.Collection;
 import java.util.Comparator;
@@ -66,6 +66,10 @@ public class EmployeeService {
             }
         }
         return employeeHighlyPaid;
+    }
+
+    public void removeEmployee(int id){
+        employees.remove(id);
     }
 
 }
